@@ -4,6 +4,7 @@ import theme from '../../themeConfig';
 import Typography from '@mui/material/Typography';
 import { Button, Grid, InputAdornment, TextField } from '@mui/material';
 import { Person, Lock } from '@mui/icons-material/';
+import './login.css';
 
 export const LoginScreen = () => {
 	return (
@@ -19,17 +20,26 @@ export const LoginScreen = () => {
 					background: 'linear-gradient(-60deg, #575755 0%, #575755 50%, #FFFFFF 50%, #FFFFFF 100%)',
 				}}
 			>
-				<Grid item xs={6}>
-					<Grid container spacing={4} direction="column" alignItems="center" justifyContent="center">
-						<Typography variant="h2" component="h1" color="secondary">
-							Bienvenidos al sistem de votación
+				<Grid item xs={6} className="grid-item-left">
+					<Grid
+						container
+						spacing={4}
+						direction="column"
+						alignItems="flex-start"
+						justifyContent="space-around"
+						width="630px"
+						height="428px"
+					>
+						<Typography variant="h2" component="h1" color="secondary" width="463px" fontSize="50px">
+							Bienvenidos al sistema de votación
 						</Typography>
-						<p>
+
+						<Typography variant="body1" component="p" color="secondary" width="619px">
 							Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem
 							ipsum
-						</p>
+						</Typography>
 
-						<Button variant="contained" color="primary">
+						<Button variant="contained" color="primary" sx={{ padding: '15px', fontSize: '14px' }}>
 							Leer más
 						</Button>
 					</Grid>
@@ -70,7 +80,7 @@ export const LoginScreen = () => {
 								/>
 							</Grid>
 							<Grid item>
-								<Button variant="contained" color="primary">
+								<Button variant="contained" color="primary" sx={{ padding: '10px 15px', fontSize: '14px' }}>
 									Ingresar
 								</Button>
 							</Grid>

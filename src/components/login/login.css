@@ -1,0 +1,5 @@
+.grid-item-left {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}

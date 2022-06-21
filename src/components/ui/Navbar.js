@@ -1,0 +1,42 @@
+import { AppBar, Avatar, Grid, IconButton, Toolbar } from '@mui/material';
+import { MenuOutlined } from '@mui/icons-material';
+import LogoUleam from '../../assets/logoUleam.png';
+import { NavLink } from 'react-router-dom';
+import './navbar.css';
+
+export const NavBar = ({ drawerWidth = 0 }) => {
+	return (
+		<AppBar
+			position="fixed"
+			sx={{
+				width: { sm: `calc(100% - ${drawerWidth}px)` },
+				ml: { sm: `${drawerWidth}px` },
+				boxShadow: 'none',
+			}}
+			color="transparent"
+			className="app-bar"
+		>
+			<Toolbar sx={{ width: '90%' }}>
+				<IconButton color="inherit" edge="start" sx={{ mr: 2, display: { sm: 'none' } }}>
+					<MenuOutlined />
+				</IconButton>
+
+				<Grid container direction="row" justifyContent="space-between" alignItems="center">
+					<Avatar alt="Logo Uleam" src={LogoUleam} sx={{ width: '263px', height: '80px', borderRadius: '0px' }} />
+
+					<Grid container justifyContent="space-between" alignItems="center" sx={{ width: '540px', height: '80px' }}>
+						<NavLink className={({ isActive }) => `nav-link-menu ${isActive ? 'active' : ''}`} to="/login">
+							Votar
+						</NavLink>
+						<NavLink className={({ isActive }) => `nav-link-menu ${isActive ? 'active' : ''}`} to="/candidatos">
+							Candidatos
+						</NavLink>
+						<NavLink className={({ isActive }) => `nav-link-menu ${isActive ? 'active' : ''}`} to="/resultados">
+							Resultados
+						</NavLink>
+					</Grid>
+				</Grid>
+			</Toolbar>
+		</AppBar>
+	);
+};
