@@ -2,8 +2,9 @@ import { ThemeProvider } from '@mui/material/styles';
 import theme from '../../themeConfig';
 
 import Typography from '@mui/material/Typography';
-import { Button, Grid, InputAdornment, TextField } from '@mui/material';
-import { Person, Lock } from '@mui/icons-material/';
+import { Button, Grid } from '@mui/material';
+import { LoginInputs } from './LoginInputs';
+
 import './login.css';
 
 export const LoginScreen = () => {
@@ -45,47 +46,7 @@ export const LoginScreen = () => {
 					</Grid>
 				</Grid>
 				<Grid item xs={6}>
-					<form>
-						<Grid container spacing={4} direction="column" alignItems="center" justifyContent="center">
-							<Grid item>
-								<TextField
-									type="email"
-									id="input-with-icon-textfield"
-									label="Correo Institucional"
-									InputProps={{
-										startAdornment: (
-											<InputAdornment position="start">
-												<Person />
-											</InputAdornment>
-										),
-									}}
-									variant="filled"
-									sx={{ background: '#FFFFFF', borderRadius: 1, width: '300px' }}
-								/>
-							</Grid>
-							<Grid item>
-								<TextField
-									type="password"
-									id="input-with-icon-textfield"
-									label="Contraseña"
-									InputProps={{
-										startAdornment: (
-											<InputAdornment position="start">
-												<Lock />
-											</InputAdornment>
-										),
-									}}
-									variant="filled"
-									sx={{ background: '#FFFFFF', borderRadius: 1, width: '300px' }}
-								/>
-							</Grid>
-							<Grid item>
-								<Button variant="contained" color="primary" sx={{ padding: '10px 15px', fontSize: '14px' }}>
-									Ingresar
-								</Button>
-							</Grid>
-						</Grid>
-					</form>
+					<LoginInputs />
 				</Grid>
 			</Grid>
 		</ThemeProvider>
