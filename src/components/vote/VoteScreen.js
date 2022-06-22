@@ -1,10 +1,11 @@
 import { ThemeProvider } from '@mui/material/styles';
 import theme from '../../themeConfig';
 
-import Typography from '@mui/material/Typography';
 import { Grid } from '@mui/material';
+
 import { VoteItem } from './VoteItem';
 import { VoteButtoms } from './VoteButtoms';
+import { VoteHeader } from './VoteHeader';
 
 export const VoteScreen = () => {
 	return (
@@ -21,13 +22,7 @@ export const VoteScreen = () => {
 			>
 				<Grid container sx={{ width: '90%', height: '100%' }} alignContent="space-between0" justifyContent="center">
 					<Grid item sx={{ width: '100%', marginTop: '20px' }}>
-						<Grid container spacing={3} direction="column" justifyContent="center" alignItems="center">
-							<Grid item sx={{ height: '100%' }}>
-								<Typography variant="h2" component="h1" color="secondary" sx={{ fontSize: '48px', fontWeight: '800' }}>
-									Seleccione un Candidato
-								</Typography>
-							</Grid>
-						</Grid>
+						<VoteHeader />
 					</Grid>
 
 					<Grid item sx={{ width: '100%' }}>

@@ -1,9 +1,9 @@
 import { ThemeProvider } from '@mui/material/styles';
 import theme from '../../themeConfig';
 
-import Typography from '@mui/material/Typography';
-import { Button, Grid } from '@mui/material';
+import { Grid } from '@mui/material';
 import { LoginInputs } from './LoginInputs';
+import { LoginHeader } from './LoginHeader';
 
 import './login.css';
 
@@ -22,29 +22,9 @@ export const LoginScreen = () => {
 				}}
 			>
 				<Grid item xs={6} className="grid-item-left">
-					<Grid
-						container
-						spacing={4}
-						direction="column"
-						alignItems="flex-start"
-						justifyContent="space-around"
-						width="630px"
-						height="428px"
-					>
-						<Typography variant="h2" component="h1" color="secondary" width="463px" fontSize="50px">
-							Bienvenidos al sistema de votación
-						</Typography>
-
-						<Typography variant="body1" component="p" color="secondary" width="619px">
-							Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem
-							ipsum
-						</Typography>
-
-						<Button variant="contained" color="primary" sx={{ padding: '15px', fontSize: '14px' }}>
-							Leer más
-						</Button>
-					</Grid>
+					<LoginHeader />
 				</Grid>
+
 				<Grid item xs={6}>
 					<LoginInputs />
 				</Grid>
