@@ -4,7 +4,7 @@ import LogoUleam from '../../assets/logoUleam.png';
 import { NavLink } from 'react-router-dom';
 import './navbar.css';
 
-export const NavBar = ({ drawerWidth = 0 }) => {
+export const NavBar = ({ drawerWidth = 0, appBarStyle = '' }) => {
 	return (
 		<AppBar
 			position="fixed"
@@ -12,9 +12,10 @@ export const NavBar = ({ drawerWidth = 0 }) => {
 				width: { sm: `calc(100% - ${drawerWidth}px)` },
 				ml: { sm: `${drawerWidth}px` },
 				boxShadow: 'none',
+				height: '80px',
 			}}
 			color="transparent"
-			className="app-bar"
+			className={`app-bar ${appBarStyle}`}
 		>
 			<Toolbar sx={{ width: '90%' }}>
 				<IconButton color="inherit" edge="start" sx={{ mr: 2, display: { sm: 'none' } }}>
