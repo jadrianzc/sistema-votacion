@@ -1,11 +1,11 @@
 import { ThemeProvider } from '@mui/material/styles';
-import theme from '../../themeConfig';
+import theme from '../../../themeConfig';
 
 import { Grid } from '@mui/material';
-import { CandidateHeader } from './CandidateHeader';
-import { CandidateItem } from './CandidateItem';
+import { CandidateDetailItem } from './CandidateDetailItem';
+import { CandidateDetailHeader } from './CandidateDetailHeader';
 
-export const CandidateScreen = () => {
+export const CandidateDetail = () => {
 	return (
 		<ThemeProvider theme={theme}>
 			<Grid
@@ -20,7 +20,9 @@ export const CandidateScreen = () => {
 			>
 				<Grid container sx={{ width: '90%', height: '100%' }} alignContent="space-between0" justifyContent="center">
 					<Grid item sx={{ width: '100%', marginTop: '20px' }}>
-						<CandidateHeader />
+						<Grid container alignItems="center" justifyContent="center">
+							<CandidateDetailHeader />
+						</Grid>
 					</Grid>
 
 					<Grid item sx={{ width: '100%' }}>
@@ -32,9 +34,7 @@ export const CandidateScreen = () => {
 							justifyContent="space-between"
 							sx={{ height: '100%' }}
 						>
-							<CandidateItem />
-							<CandidateItem />
-							<CandidateItem />
+							<CandidateDetailItem />
 						</Grid>
 					</Grid>
 				</Grid>
