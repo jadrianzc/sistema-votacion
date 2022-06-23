@@ -17,7 +17,9 @@ export const AppRouter = () => {
 				<Route path="inicio" element={<WelcomeScreen />} />
 				<Route path="votar" element={<VoteScreen />} />
 				<Route path="candidatos" element={<CandidateScreen />} />
-				<Route path="candidatos/detalle" element={<CandidateDetail />} />
+				<Route path="candidatos">
+					<Route path=":detalle" element={<CandidateDetail />} />
+				</Route>
 				<Route path="resultados" element={<ResultScreen />} />
 
 				<Route path="/" element={<Navigate to={'/login'} />} />
