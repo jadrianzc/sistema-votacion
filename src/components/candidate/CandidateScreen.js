@@ -8,6 +8,7 @@ import {
   Typography,
   CardActionArea,
 } from "@mui/material";
+import { Link } from "react-router-dom";
 
 export const CandidateScreen = () => {
   return (
@@ -21,11 +22,15 @@ export const CandidateScreen = () => {
           item
           key={lista}
           sx={{
-            width: "80%",
+            width: "90%",
           }}
         >
           <Card sx={{ border: "1px solid #575755", borderRadius: "25px" }}>
-            <CardActionArea sx={{ p: 2, display: "flex" }}>
+            <CardActionArea
+              component={Link}
+              to={`/candidatos/${lista}`}
+              sx={{ p: 2, display: "flex" }}
+            >
               <CardMedia
                 component="img"
                 height="125"

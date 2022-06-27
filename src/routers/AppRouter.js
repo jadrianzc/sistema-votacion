@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { CandidateScreen } from "../components/candidate/CandidateScreen";
+import { CandidateDetails } from "../components/candidate/CandidateDetails";
 import { LoginScreen } from "../components/login/LoginScreen";
 import { ResultScreen } from "../components/result/ResultScreen";
 import { WelcomeScreen } from "../components/welcome/WelcomeScreen";
@@ -16,6 +17,7 @@ export const AppRouter = () => {
           <Route path="inicio" element={<WelcomeScreen />} />
           <Route path="votar" element={<VoteScreen />} />
           <Route path="candidatos" element={<CandidateScreen />} />
+          <Route path="candidatos/:lista" element={<CandidateDetails />} />
           <Route path="resultados" element={<ResultScreen />} />
           <Route index element={<Navigate to={"/login"} />} />
           <Route path="*" element={<h1>Not Found</h1>} />
