@@ -1,0 +1,30 @@
+.nav-link-menu {
+  color: white;
+  font-size: 26px;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.active {
+  border-bottom-color: #ff3838;
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+  line-height: 12pt;
+}
+
+.app-bar {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  /*padding-top: 14px;*/
+}
+
+.app-bar-style {
+  background: linear-gradient(
+    -60deg,
+    #575755 0%,
+    #575755 40%,
+    #ffffff 40%,
+    #ffffff 100%
+  );
+}
